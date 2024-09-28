@@ -15,26 +15,20 @@
     'footer';
 }
 
-.bodylayout {
-  width: 100%;
-  height:5fr;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-    'body';
-}
-
 .header{
   grid-area: header;
-  background-color: aqua;
+  background-color: gray;
 }
 .body{
   grid-area: body;
-  grid-column: inherit;
-  background-color: rebeccapurple;
+  background-color: rgb(66,73,73);
 }
 .footer{
   grid-area: footer;
-  background-color: rgb(255, 123, 0);
+  background-color: gray;
 }
+
+/*------------------------------------------------*/
+
+
+
