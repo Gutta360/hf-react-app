@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
     const textstyling = {
-        fontFamily : 'fantasy',
-        fontSize : '30px'
+        fontFamily : 'copperplate',
+        fontSize : '35px'
     } 
     return(
         <div style={textstyling}>Harini Fertilizers</div>
