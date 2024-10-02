@@ -39,12 +39,78 @@ const Register = () => {
                 noValidate
                 autoComplete="off"
             >
-                <TextField id="standard-basic" label="Username" variant="standard" />
+                <TextField
+
+                    sx={{
+                        // Default underline
+                        '& .MuiInput-underline:before': {
+                            borderBottomColor: 'white', // Default underline color
+                        },
+                        // Hover underline
+                        '& .MuiInput-underline:hover:not(.Mui-disabled):before': {
+                            borderBottomColor: 'white', // Hover underline color
+                        },
+                        // Focused underline
+                        '& .MuiInput-underline:after': {
+                            borderBottomColor: 'white', // Focused underline color
+                        },
+                        '& .MuiInputLabel-root': {
+                            color: 'white', // Default label color
+                        },
+                        '& .MuiInputLabel-root.Mui-focused': {
+                            color: 'white', // Focused label color
+                        },
+                        '& .MuiFormHelperText-root': {
+                            color: 'white', // Helper text color
+                        },
+                        // Change the color of the entered text
+                        '& .MuiInput-root': {
+                            '& input': {
+                                color: 'white', // Text color of the input
+                            }
+                        }
+                    }}
+
+                    id="standard-basic" label="Username" variant="standard" />
                 <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
                     <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
                     <Input
                         id="standard-adornment-password"
                         type={showPassword ? 'text' : 'password'}
+                        sx={{
+                            // Change the text color to white
+                            input: {
+                                color: 'white',
+                            },
+                            // Change the placeholder color to white
+                            '& .MuiInputBase-input::placeholder': {
+                                color: 'white',
+                            },
+                            // Change the border color to white
+                            '& .MuiInput-underline:before': {
+                                borderBottomColor: 'white',
+                            },
+                            // Change the border color on hover
+                            '&:hover .MuiInput-underline:before': {
+                                borderBottomColor: 'white',
+                            },
+                            // Change the border color when focused
+                            '& .MuiInput-underline:after': {
+                                borderBottomColor: 'white',
+                            },
+                            // Change the label color to white
+                            '& .MuiInputLabel-root': {
+                                color: 'white',
+                            },
+                            // Change the label color when focused
+                            '& .MuiInputLabel-root.Mui-focused': {
+                                color: 'white',
+                            },
+                            // Change the color of the adornment icon (visibility toggle)
+                            '& .MuiSvgIcon-root': {
+                                color: 'white',
+                            },
+                        }}
                         endAdornment={
                             <InputAdornment position="end">
                                 <IconButton

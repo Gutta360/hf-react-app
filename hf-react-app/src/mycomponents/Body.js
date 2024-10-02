@@ -48,29 +48,47 @@ export default function BasicTabs() {
     fontSize: '18px'
   }
 
+  const home_tabstyle_sx = {
+    '& .MuiTab-root': {
+      color: 'gray', // Unselected tab color
+    },
+    '&.Mui-selected': {
+      color: 'white', // Selected tab color
+    }
+  }
+
+  const register_tabstyle_sx = {
+    '& .MuiTab-root': {
+      color: 'gray', // Unselected tab color
+    },
+    '&.Mui-selected': {
+      color: 'white', // Selected tab color
+    }
+  }
+
+  const transactions_tabstyle_sx = {
+    '& .MuiTab-root': {
+      color: 'gray', // Unselected tab color
+    },
+    '&.Mui-selected': {
+      color: 'white', // Selected tab color
+    }
+  }
+
   return (
     <div style={{ width: '100%', height: '84vh', overflowY: 'auto' }}>
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs
-
             TabIndicatorProps={{
               style: {
-                backgroundColor: '#ff5722', // Underline (indicator) color
+                backgroundColor: 'white', // Underline (indicator) color
               },
             }}
-
-            sx={{
-              '& .MuiTab-root': {
-                color: 'gray', // Unselected tab color
-              },
-              '& .Mui-selected': {
-                color: '#ff5722', // Selected tab color
-              },
-            }} value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab style={tablabel} label="Home" {...a11yProps(0)} />
-            <Tab style={tablabel} label="Register" {...a11yProps(1)} />
-            <Tab style={tablabel} label="Transactions" {...a11yProps(2)} />
+            value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Tab style={tablabel} sx={home_tabstyle_sx} label="Home" {...a11yProps(0)} />
+            <Tab style={tablabel} sx={register_tabstyle_sx} label="Register" {...a11yProps(1)} />
+            <Tab style={tablabel} sx={transactions_tabstyle_sx} label="Transactions" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
