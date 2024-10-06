@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import Home from './Home';
+import Login from './Login';
 import Register from './Register';
 import Transactions from './Transactions';
 
@@ -86,13 +86,13 @@ export default function BasicTabs() {
               },
             }}
             value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab style={tablabel} sx={home_tabstyle_sx} label="Home" {...a11yProps(0)} />
+            <Tab style={tablabel} sx={home_tabstyle_sx} label="Login" {...a11yProps(0)} />
             <Tab style={tablabel} sx={register_tabstyle_sx} label="Register" {...a11yProps(1)} />
             <Tab style={tablabel} sx={transactions_tabstyle_sx} label="Transactions" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          <Home />
+          <Login />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <Register />
